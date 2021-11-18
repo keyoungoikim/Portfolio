@@ -10,11 +10,11 @@ body::-webkit-scrollbar-thumb {
     background: #f99;
 }
 section{height:100vh; position:relative;}
-section:nth-child(1){background:url('../img/0.jpg'); background-size: cover; background-position: center center;}
+section:nth-child(1){background:url('../img/wallpaper-g3f99562bc_1920.jpg'); background-size: cover; background-position: center center;}
 /* section:nth-child(2){background:url('../img/1.jpg'); background-size: cover; background-position: center center;} */
-section:nth-child(3){background:url('../img/2.jpg'); background-size: cover; background-position: center center;}
-section:nth-child(4){background:url('../img/3.jpg'); background-size: cover; background-position: center center;}
-section:nth-child(5){background:url('../img/4.jpg'); background-size: cover; background-position: center center;}
+/* section:nth-child(3){background:url('../img/2.jpg'); background-size: cover; background-position: center center;} */
+/* section:nth-child(4){background:url('../img/3.jpg'); background-size: cover; background-position: center center;} */
+/* section:nth-child(5){background:url('../img/4.jpg'); background-size: cover; background-position: center center;} */
 section:nth-child(6){background:url('../img/5.jpg'); background-size: cover; background-position: center center;}
 
 section .box{position:absolute; top:300px; left:-300px; opacity:0; border:2px #333 solid;  width:150px; height: 150px; transition:all .6s;}
@@ -23,7 +23,7 @@ section .txt{position:absolute; top:-300px; left:700px; opacity:0; border:2px #3
 section.active .box{position:absolute; top:300px; left:300px; opacity:1; border:2px #333 solid;  width:150px; height: 150px; }
 section.active .txt{position:absolute; top:300px; left:700px; opacity:1; border:2px #333 solid; width:300px; height:150px; background: #fff; }
 
-.targetMenu{width:50px; height:300px; position:fixed; top:calc(50% - 150px); left:calc(100% - 150px); z-index: 9999999;}
+.targetMenu{width:50px; height:300px; position:fixed; top:calc(50% - 150px); left:calc(100% - 80px); z-index: 9999999;}
 .targetMenu a{display:block; width:20px; height: 20px; line-height: 20px; text-align: center; background:#ccc; font-size: 1.2rem; border-radius: 50%;
     cursor: pointer; transition:all .6s; margin: 0 auto;
 }
@@ -77,7 +77,6 @@ section .title span:nth-child(20){transition-delay: 1.8s;font-weight: 100; font-
 section .protitle{
     width: 30%;
     height: 50vh;
-    background:#fff;
     position: absolute;
     top:25vh;
     left:-50%;
@@ -86,7 +85,6 @@ section .protitle{
 section.active .protitle{
     width: 30%;
     height: 50vh;
-    background:#fff;
     position: absolute;
     top:25vh;
     left:10%;
@@ -141,7 +139,7 @@ section .round{
     background: #adf;
     border-radius: 10px;
     position: absolute;
-    top:12%;
+    top:19%;
     left:50%;
     transform: translateX(-50%);   
     transition:.3s;
@@ -174,7 +172,39 @@ section.active .round{
     transform: translateX(-50%);
 }
 
+/* 섹션 2번째 - profile - */
+section .profile{
+    position:absolute;
+    width:30%;
+    height:35vh;
+    top:40vh;
+    left:100%;
+    transition:.6s;
+    transition-delay: .6s;
+    opacity: 0;
+}
+section.active .profile{
+    position:absolute;
+    width:30%;
+    height:35vh;
+    top:40vh;
+    left:50%;
+    opacity: 1;
+}
+.profile table{
+    width:100%;
+}
+.profile table tr td:nth-child(1){
+    width:30%; 
+    vertical-align: top;
+    color:dodgerblue;
+    font-weight: bold;
+}
+.profile table tr td:nth-child(2){
+    padding-bottom: 50px;    
+}
 .chart{
+    display:none;
     width:300px;
     height:180px;
     position: absolute;
@@ -218,32 +248,250 @@ section.active .chart .graph li:nth-child(3) div{
     transition-delay: 1.8s;
 }
 
-/* 3번 섹션 */
-.container{
+#skillcontainer{
     position:absolute;
-    top:50%;
-    left:-20%;
-    background:#eee;
+    top:80vh; left:10%;
+    width:70%;
+    display:flex;
 }
-.ibox{width:600px; height:150px;
-    background:#fee;
-    transform-origin: left center;
-    position: absolute;
-    transition:.3s;
+.skillchart {
+            position: relative;
+            width:100px;
+            height:100px;
+        }
+.skillchart span.skilltitle{
+    position: absolute; display: block; width: 100%; text-align: center; 
+    top:50%; left: 50%;
+    transform: translate(-50%, -50%);
 }
-.ibox:nth-child(1){
-    /* transform: rotate(90deg) translateX(400px); */
-    background: url("https://cdn.pixabay.com/photo/2016/07/11/15/43/woman-1509956_960_720.jpg");
+
+section .port{
+    font-size:15rem;
+    font-weight:800;
+    font-family: 'Open Sans', sans-serif;
+    font-style:italic;
+    position:absolute;
+    top:calc(50vh + 150px);
+    left:calc(13% - 259.8px);
+    transform: rotate(-30deg);
+    transform-origin: left top;
+    z-index:1;
+    opacity:0;
+    transition:.6s;
 }
-.ibox:nth-child(2){
-    /* transform: rotate(60deg) translateX(400px); */
-    background: url("https://cdn.pixabay.com/photo/2018/03/12/12/32/woman-3219507_960_720.jpg");
+section.active .port{
+    font-size:15rem;
+    font-weight:800;
+    font-family: 'Open Sans', sans-serif;
+    font-style:italic;
+    position:absolute;
+    top:50vh;
+    left:13%;
+    transform: rotate(-30deg);
+    transform-origin: left top;
+    z-index:1;
+    opacity:0.05;
+    transition:.6s;
 }
-.ibox:nth-child(3){
-    /* transform: rotate(30deg) translateX(400px); */
-    background: url("https://cdn.pixabay.com/photo/2016/03/23/04/01/woman-1274056_960_720.jpg");
+section .folio{
+    font-size:15rem;
+    font-family: 'Open Sans', sans-serif;
+    font-style:italic;
+    position:absolute;
+    top:calc(45vh - 150px);
+    left:calc(40% + 259.8px);
+    transform: rotate(-30deg);
+    transform-origin: left top;
+    z-index:1;
+    opacity:0.05;
+    transition:.6s;
 }
-.ibox:nth-child(4){
-    /* transform: rotate(0deg) translateX(400px); */
-    background: url("https://cdn.pixabay.com/photo/2016/01/19/17/48/woman-1149911_960_720.jpg");
+section.active .folio{
+    font-size:15rem;
+    font-family: 'Open Sans', sans-serif;
+    font-style:italic;
+    position:absolute;
+    top:45vh;
+    left:40%;
+    transform: rotate(-30deg);
+    transform-origin: left top;
+    z-index:1;
+    opacity:0.05;
+    transition:.6s;
+}
+/* 3번 섹션 */
+section .leftSul{
+    width:20%;
+    height:80vh;
+    position:absolute;
+    top:10vh;
+    left:10%;
+    opacity: 0;
+    transition:.6s;
+    transition-delay: 0.6s;
+}
+section.active .leftSul{
+    left:5%;
+    opacity: 1;
+}
+section .rightMokup{
+    width:70%;
+    height:80vh;
+    position:absolute;
+    top:10vh;
+    left:150%;
+    background: #fee;
+    opacity: 0;
+    transition-delay: 0.6s;
+    transition:.6s;
+}
+section.active .rightMokup{
+    width:70%;
+    height:80vh;
+    position:absolute;
+    top:10vh;
+    left:30%;
+    background: #fee;
+    opacity: 1;
+    background: url('../img/185.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+.Dintro{
+    position:absolute;
+    bottom:0;
+}
+.Dintro p{
+    border-bottom: 16px;
+    font-size:10px;
+    font-family:'NotoSansKR', cursive;
+}
+.Dintro p:last-child{
+    padding-bottom:0;
+}
+
+.ColorBox{
+    width:10px;
+    height:10px;
+    background: #faa;
+    display:inline-block;
+}
+
+/* 4번쨰 섹션 */
+section .leftSul{
+    width:20%;
+    height:80vh;
+    position:absolute;
+    top:10vh;
+    left:10%;
+    opacity: 0;
+    transition:.6s;
+    transition-delay: 0.6s;
+}
+.rightMokup img{
+    width: 80%;
+}
+section.active .leftSul{
+    left:5%;
+    opacity: 1;
+}
+section .rightMokup{
+    width:70%;
+    height:80vh;
+    position:absolute;
+    top:10vh;
+    left:150%;
+    background: #fee;
+    opacity: 0;
+    transition-delay: 0.6s;
+    transition:.6s;
+}
+section:nth-child(4).active .rightMokup{
+    width:70%;
+    height:80vh;
+    position:absolute;
+    top:10vh;
+    left:30%;
+    background: #fee;
+    opacity: 1;
+    background: url('../img/5654586-작업물.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+.Dintro{
+    position:absolute;
+    bottom:0;
+}
+.Dintro p{
+    border-bottom: 16px;
+    font-size:10px;
+    font-family:'NotoSansKR', cursive;
+}
+.Dintro h3{
+    padding-bottom: 3px;
+}
+.Dintro p:nth-child(4),.Dintro p:nth-child(6){
+    padding-bottom:10px;
+}
+.Dintro p ul li{
+    line-height:26px;
+}
+.Dintro p:last-child{
+    padding-bottom:0;
+}
+
+/* 5번째 섹션 */
+section:nth-child(5).active .rightMokup{
+    background: url('../img/PSD_07\ 작업.png');
+}
+/* 컬러박스 */
+.ColorBox1{
+    width:10px;
+    height:10px;
+    background: #dc2c34;
+    display:inline-block;
+    position:relative;
+    top:1.4px;
+}
+.ColorBox2{
+    width:8px;
+    height:8px;
+    background: #ffffff;
+    border:#333 1px solid;
+    display:inline-block;
+    position:relative;
+    top:1.4px;
+}
+.ColorBox3{
+    width:10px;
+    height:10px;
+    background: #fef100;
+    display:inline-block;
+    position:relative;
+    top:1.4px;
+}
+.ColorBox4{
+    width:8px;
+    height:8px;
+    background: #ffffff;
+    border:#333 1px solid;
+    display:inline-block;
+    position:relative;
+    top:1.4px;
+}
+.ColorBox5{
+    width:10px;
+    height:10px;
+    background: #ffff66;
+    display:inline-block;
+    position:relative;
+    top:1.4px;
+}
+.ColorBox6{
+    width:10px;
+    height:10px;
+    background: #ffcccc;
+    display:inline-block;
+    position:relative;
+    top:1.4px;
 }

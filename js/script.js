@@ -1,4 +1,6 @@
-var targetMenu = document.querySelector(".targetMenu");
+
+
+        var targetMenu = document.querySelector(".targetMenu");
         var onTaget = document.querySelectorAll(".targetMenu ul li");
         var section = document.querySelectorAll("section");
         var sectionCounter = 0; 
@@ -25,7 +27,6 @@ var targetMenu = document.querySelector(".targetMenu");
             setTimeout(activeMenu,300);
             onTargetMenu();
 
-            if(sectionCounter != 2 && tn == 1) tn = 0;
         }
 
         function activeMenu(){
@@ -47,32 +48,21 @@ var targetMenu = document.querySelector(".targetMenu");
             });
             onTaget[sectionCounter].children[0].classList.add("on");
         }
-
-        window.addEventListener('load', roImg);
-        section[2].addEventListener('wheel', roImg);
-        var ibox = document.querySelectorAll(".ibox");
-        var icount = 0;
-        var tn = 0;
-
-        function roImg(e){
-            if(e.wheelDelta>0) return;
-            if(tn) return;
-            icount--;
-            ibox[0].style.transform = `rotate(${icount}deg) translateX(400px)`;
-            ibox[1].style.transform = `rotate(${icount+30}deg) translateX(400px)`;
-            ibox[2].style.transform = `rotate(${icount+60}deg) translateX(400px)`;
-            ibox[3].style.transform = `rotate(${icount+90}deg) translateX(400px)`;
-            if(icount<-90 && tn == 0 ){
-                icount = 0;
-                ibox[0].style.transform = `rotate(${icount}deg) translateX(400px)`;
-                ibox[1].style.transform = `rotate(${icount+30}deg) translateX(400px)`;
-                ibox[2].style.transform = `rotate(${icount+60}deg) translateX(400px)`;
-                ibox[3].style.transform = `rotate(${icount+90}deg) translateX(400px)`;
-                tn = 1;
-            }else{
-                count = 0;
+        $('.skillchart').click(
+            function(){
+                $(this).easyPieChart({
+                    barColor: '#aaf',
+                    trackColor: '#ccc',
+                    scaleColor: '#fff',
+                    lineCap: 'butt',
+                    lineWidth: 10,
+                    size: 100,
+                    animate: 1000,
+                    });
+                    var jumsu = $(this).attr('data-percent');
+                    $(this).children().children('.jumsu').html(jumsu);
             }
-        }
+        );
 
         // 스크롤 막기 시작
         $('html, body').css({'overflow': 'hidden', 'height': '100%'});

@@ -15,6 +15,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.min.js"></script>
 </head>
 <body>
     <div class="targetMenu">
@@ -46,6 +50,22 @@
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur nemo pariatur explicabo dicta accusantium assumenda quo fugiat, veritatis quasi amet, eum iste quibusdam repellat vero voluptatem incidunt cumque accusamus vel.
                 </p>
             </div>
+            <div class="profile">
+                <table>
+                    <tr>
+                        <td>Profile</td>
+                        <td>김경외(24)<br> kim kyeong woi</td>
+                    </tr>
+                    <tr>
+                        <td>Education</td>
+                        <td>awdwaddsgfdgdfhg<br>awdwaddsgfdgdfhg<br>awdwaddsgfdgdfhg<br>awdwaddsgfdgdfhg</td>
+                    </tr>
+                    <tr>
+                        <td>Contact</td>
+                        <td>010-0000-0000 <br>rlaruddhl12@naver.com</td>
+                    </tr>
+                </table>
+            </div>
             <div class="chart">
                 <ul class="graph">
                     <li><div></div></li>
@@ -53,22 +73,110 @@
                     <li><div></div></li>
                 </ul>
             </div>
-        </section>
-        <section>
-            <div class="container">
-                <div class="ibox"></div>
-                <div class="ibox"></div>
-                <div class="ibox"></div>
-                <div class="ibox"></div>
+            <div id="skillcontainer">
+                <div class="skillchart" data-percent="95">
+                    <span class="skilltitle">HTML<br><spam class="jumsu">click</spam></span>
+                </div>
+                <div class="skillchart" data-percent="95">
+                    <span class="skilltitle">CSS<br><spam class="jumsu">click</spam></span>
+                </div>
+                <div class="skillchart" data-percent="60">
+                    <span class="skilltitle">JS<br><spam class="jumsu">click</spam></span>
+                </div>
+                <div class="skillchart" data-percent="95">
+                    <span class="skilltitle">PS<br><spam class="jumsu">click</spam></span>
+                </div>
+                <div class="skillchart" data-percent="90">
+                    <span class="skilltitle">Ai<br><spam class="jumsu">click</spam></span>
+                </div>
+                <div class="skillchart" data-percent="70">
+                    <span class="skilltitle">Id<br><spam class="jumsu">click</spam></span>
+                </div>
+                <div class="skillchart" data-percent="90">
+                    <span class="skilltitle">Figma<br><spam class="jumsu">click</spam></span>
+                </div>
+            </div>
+            <!-- 포폴 사선 배경 -->
+            <div class="portfoliotitle">
+                <div class="port">Port</div>
+                <div class="folio">Folio</div>
             </div>
         </section>
-        <section>
-            <div class="box"></div>
-            <div class="txt">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga debitis assumenda exercitationem modi eaque perspiciatis incidunt ullam nemo quo dolorem. Adipisci similique officiis omnis in commodi id exercitationem debitis quo.</div>
+        <section> <!-- 3번째 섹션 -->
+            <div class="leftSul">
+                <div class="Ptitle">
+                    Project 01<br>
+                    Responsive
+                </div>
+                <div class="Dintro">
+                        <h3>Introduce project</h3>
+                        <p>이 프로젝트는 반응형 사이트로 ...</p>
+                        <p>이 프로젝트는 반응형 사이트로 ...</p> <!-- 3줄~4줄 -->
+                        <p>이 프로젝트는 반응형 사이트로 ...</p>
+                        <h3>Use fonts</h3>
+                        <p>Noto Sans kr</p> 
+                        <h3>Color System</h3>
+                    <ul>
+                        <li><p><span class="ColorBox4"></span>#ffffff</p></li>
+                        <li><p><span class="ColorBox5"></span>#ffff66</p></li>  <!-- 들어가는 색으로 변경하기 -->
+                        <li><p><span class="ColorBox6"></span>#ffcccc</p></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rightMokup">
+                
+            </div>    
+        </section>
+        <section> <!-- 4번째 -->
+            <div class="leftSul">
+                <div class="Ptitle">
+                    Project 01<br>
+                    Responsive
+                </div>
+                <div class="Dintro">
+                        <h3>Introduce project</h3>
+                        <p>이 프로젝트는 반응형 사이트로 ...</p>
+                        <p>이 프로젝트는 반응형 사이트로 ...</p> <!-- 3줄~4줄 -->
+                        <p>이 프로젝트는 반응형 사이트로 ...</p>
+                        <h3>Use fonts</h3>
+                        <p>Noto Sans kr</p> 
+                        <h3>Color System</h3>
+                        <ul>
+                            <li><p><span class="ColorBox1"></span>#dc2c34</p></li>
+                            <li><p><span class="ColorBox2"></span>#ffffff</p></li>
+                            <li><p><span class="ColorBox3"></span>#fef100</p></li>
+                        </ul>
+                </div>
+            </div>
+            <div class="rightMokup">
+                
+            </div> 
         </section>
         <section>
-            <div class="box"></div>
-            <div class="txt">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga debitis assumenda exercitationem modi eaque perspiciatis incidunt ullam nemo quo dolorem. Adipisci similique officiis omnis in commodi id exercitationem debitis quo.</div>
+            <div class="leftSul">
+                <div class="Ptitle">
+                    Project 01<br>
+                    Responsive
+                </div>
+                <div class="Dintro">
+                        <h3>Introduce project</h3>
+                        <p>이 프로젝트는 반응형 사이트로 ...</p>
+                        <p>이 프로젝트는 반응형 사이트로 ...</p> <!-- 3줄~4줄 -->
+                        <p>이 프로젝트는 반응형 사이트로 ...</p>
+                        <h3>Use fonts</h3>
+                        <p>Noto Sans kr</p> 
+                        <h3>Color System</h3>
+                        
+                    <ul>
+                        <li><p><span class="ColorBox4"></span>#ffffff</p></li>
+                        <li><p><span class="ColorBox5"></span>#ffff66</p></li>  <!-- 들어가는 색으로 변경하기 -->
+                        <li><p><span class="ColorBox6"></span>#ffcccc</p></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rightMokup">
+                
+            </div>
         </section>
         <section>
             <div class="box"></div>
