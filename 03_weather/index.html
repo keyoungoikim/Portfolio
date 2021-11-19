@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="http://dapi.kakao.com/v2/maps/sdk.js?appkey=bb9a19ab12ab00b80f8fbbbef995cc92"></script>
+    <title>마이 날씨</title>
+    <style>
+        *{margin: 0 auto; padding:0;}
+        li{list-style: none;}
+        #wrap{width:375px; height:752px;
+            background:rgba(0,0,0,.3);
+            position:absolute;
+            top:50%; left:50%;
+            transform: translate(-50%, -50%);
+            padding-top: 60px;
+            border-radius: 10px;
+        }
+        .current{
+            width:60%; 
+            background:rgba(0,0,0,.4);
+            border-radius: 10px;
+            height:250px;
+            margin-bottom: 40px;
+            color:#fff;
+        }
+        .city{
+            text-align: center;
+            padding-top: 40px;
+        }
+        .icon{
+            text-align: center;
+        }
+        .text{
+            text-align: center;
+        }
+        #map{
+            width:70%;
+            height:280px;
+            border-radius: 10px;
+        }
+        .forecast ul{
+            width:350px;
+            display:flex;
+            margin-bottom: 20px;
+        }
+        .forecast li{
+            width:23%;
+            padding:1px;
+            background:rgba(0,0,0,.3);
+            border-radius: 3px;
+            color:#fff;
+            font-size: 0.8rem;
+            text-align: center;
+            padding-bottom: 10px;
+        }
+        .air{
+            position:absolute;
+            top:130px;
+            left:250px;
+            width:23%;
+            height:130px;
+            background:#ccc;
+            border-radius: 5px;
+            font-weight: 300;
+        }
+        body{
+            background:url('https://cdn.pixabay.com/photo/2013/07/18/10/56/house-163526_960_720.jpg');
+            background-size:cover;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="current">
+            <div class="city"></div>
+            <div class="icon"></div>
+            <div class="text"></div>
+        </div>
+        <div class="forecast">
+            <ul>
+                <li>
+                    <div class="ficon"></div>
+                    <div class="ftext"></div>
+                    <div class="ftemp"></div>
+                    <div class="ftime"></div>
+                </li>
+                <li>
+                    <div class="ficon"></div>
+                    <div class="ftext"></div>
+                    <div class="ftemp"></div>
+                    <div class="ftime"></div>
+                </li>
+                <li>
+                    <div class="ficon"></div>
+                    <div class="ftext"></div>
+                    <div class="ftemp"></div>
+                    <div class="ftime"></div>
+                </li>
+                <li>
+                    <div class="ficon"></div>
+                    <div class="ftext"></div>
+                    <div class="ftemp"></div>
+                    <div class="ftime"></div>
+                </li>
+            </ul>
+        </div> 
+        <div id="map"></div>
+
+        <div class="air"></div>
+
+    </div>
+
+    <script>
+        var city = document.querySelector(".city");
+        var icon = document.querySelector(".icon");
+        var text = document.querySelector('.text');
+
+        var ficon = document.querySelectorAll(".ficon");
+        var ftext = document.querySelectorAll(".ftext");
+        var ftemp = document.querySelectorAll(".ftemp");
+        var ftime = document.querySelectorAll(".ftime");
+
+        var weather = document.querySelector(".weather");
+        var Lat, Lon;
+
+        navigator.geolocation.getCurrentPosition(function(position) {
+        
+            Lat = position.coords.latitude; // 위도
+            Lon = position.coords.longitude; // 경도
+            show(Lat, Lon);
+
+            var options = {
+                center: new kakao.maps.LatLng(Lat, Lon),
+                level: 10
+            };
+
+            var map = new kakao.maps.Map(container, options);
+
+            var marker = new kakao.maps.Marker({ 
+                // 지도 중심좌표에 마커를 생성합니다 
+                position: map.getCenter() 
+            }); 
+            
+            // 지도에 마커를 표시합니다
+            marker.setMap(map);
+
+            // 지도를 클릭한 위치에 표출할 마커넣기 끝 -----
+
+            // 지도에 클릭 이벤트를 등록합니다
+            // 지도를 클릭하면 마지막 파라미터로 넘어온 함수를 호출합니다
+            kakao.maps.event.addListener(map, 'click', function(mouseEvent) {        
+                
+                // 클릭한 위도, 경도 정보를 가져옵니다 
+                var latlng = mouseEvent.latLng; 
+                
+                // 마커 위치를 클릭한 위치로 옮깁니다
+                marker.setPosition(latlng);
+                
+                // text.innerHTML = "위도 : " + latlng.getLat() + "<br>경도 : " + latlng.getLng();
+                // 위도 : latlng.getLat()
+                // 경도 : latlng.getLng()
+                show(latlng.getLat(),latlng.getLng());
+            });
+        });
+
+        var container = document.getElementById('map');
+        
+        var air = document.querySelector('.air');
+
+        function show(Lat, Lon){
+            $.getJSON(`http://api.openweathermap.org/data/2.5/weather?lat=${Lat}&lon=${Lon}&appid=02a146d88b51a0a88235d8a46514d112&units=metric`,function(data){
+                city.innerHTML = data.name;
+                icon.innerHTML = `<img src='http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png'>`;
+                text.innerHTML = data.main.temp + "&degC";
+              
+            });
+            $.getJSON(`https://api.openweathermap.org/data/2.5/forecast?lat=${Lat}&lon=${Lon}&appid=2c1035dd6e14fd82192a261ea246db86&units=metric`,function(fdata){
+                for(var j = 0; j < 4; j++){
+                    var ft = [];
+                    ft[j] = new Date(fdata.list[(j+1)*8].dt*1000);
+                        
+                    ficon[j].innerHTML = `<img src='http://openweathermap.org/img/wn/${fdata.list[(j+1)*8].weather[0].icon}.png' alt=''>`
+                    ftext[j].innerHTML = fdata.list[(j+1)*8].weather[0].main;
+                    ftemp[j].innerHTML = fdata.list[(j+1)*8].main.temp + "&deg;C";
+                    ftime[j].innerHTML = ft[j].getDate()+"일";
+                }
+            });
+            $.getJSON(`http://api.openweathermap.org/data/2.5/air_pollution/forecast?lat=${Lat}&lon=${Lon}&appid=02a146d88b51a0a88235d8a46514d112`,function(airData){
+                
+                // var airtime = new Date(airData.list[0].dt*1000);
+                // air.innerHTML = airtime + " ";
+                // air.innerHTML += airData.list[0].components.pm2_5 + " ";
+                // air.innerHTML += airData.list[0].components.pm10 + " ";
+
+                var s_mise = airData.list[0].components.pm2_5;
+                var mise = airData.list[0].components.pm10;
+                var s_mise_text, mise_text, total_mise, total_bg;
+
+                if(s_mise < 16){
+                    s_mise_text = "좋음";
+                }else if(s_mise < 36){
+                    s_mise_text = "보통";
+                }else if(s_mise < 76){
+                    s_mise_text = "나쁨";
+                }else{
+                    s_mise_text = "매우나쁨";
+                }
+
+                if(mise < 31){
+                    mise_text = "좋음";
+                }else if(mise < 81){
+                    mise_text = "보통";
+                }else if(mise < 151){
+                    mise_text = "나쁨";
+                }else{
+                    mise_text = "매우나쁨";
+                }
+
+                if(s_mise < 16 && mise < 31){
+                    total_mise = "좋음";
+                    total_bg = "img/좋음.PNG";
+                }else if(s_mise < 36 && mise < 81){
+                    total_mise = "보통";
+                    total_bg = "img/보통.PNG";
+                }else if(s_mise < 72 && mise < 151){
+                    total_mise = "나쁨";
+                    total_bg = "img/나쁨.PNG";
+                }else{
+                    total_mise = "매우나쁨";
+                    total_bg = "img/매우나쁨.PNG";
+                }
+
+                air.innerHTML = ""; //초기화
+                air.innerHTML += total_mise + "<br>";
+                air.innerHTML += "초미세 : " + s_mise_text + "(" + s_mise + ") <br>";
+                air.innerHTML += "미세 : " + mise_text + "(" + mise + ")";
+
+                air.style.background = `url("${total_bg}")`;
+                air.style.backgroundSize = "cover";
+            });
+        }
+        
+    </script> 
+     
+</body>
+</html>
