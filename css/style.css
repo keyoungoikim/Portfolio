@@ -1,7 +1,7 @@
 @charset "utf-8";
 *{margin:0; padding:0;}
 li{list-style: none;}
-#wrap{height:600vh;}
+#wrap{height:700vh;}
 body::-webkit-scrollbar {
     width: 0.7em;
     background: #f33;
@@ -10,12 +10,9 @@ body::-webkit-scrollbar-thumb {
     background: #f99;
 }
 section{height:100vh; position:relative;}
-section:nth-child(1){background:url('../img/wallpaper-g3f99562bc_1920.jpg'); background-size: cover; background-position: center center;}
-/* section:nth-child(2){background:url('../img/1.jpg'); background-size: cover; background-position: center center;} */
-/* section:nth-child(3){background:url('../img/2.jpg'); background-size: cover; background-position: center center;} */
-/* section:nth-child(4){background:url('../img/3.jpg'); background-size: cover; background-position: center center;} */
-/* section:nth-child(5){background:url('../img/4.jpg'); background-size: cover; background-position: center center;} */
-section:nth-child(6){background:url('../img/5.jpg'); background-size: cover; background-position: center center;}
+section:nth-child(1){background:url('../img/background-image-3325335_1920.jpg'); background-size: cover; background-position: center center;}
+section:nth-child(7){background: url('../img/background-image-3325335_1920.jpg'); background-size: cover; background-position: center center;}
+
 
 section .box{position:absolute; top:300px; left:-300px; opacity:0; border:2px #333 solid;  width:150px; height: 150px; transition:all .6s;}
 section .txt{position:absolute; top:-300px; left:700px; opacity:0; border:2px #333 solid; width:300px; height:150px; background: #fff; transition:all .6s;}
@@ -24,7 +21,7 @@ section.active .box{position:absolute; top:300px; left:300px; opacity:1; border:
 section.active .txt{position:absolute; top:300px; left:700px; opacity:1; border:2px #333 solid; width:300px; height:150px; background: #fff; }
 
 .targetMenu{width:50px; height:300px; position:fixed; top:calc(50% - 150px); left:calc(100% - 80px); z-index: 9999999;}
-.targetMenu a{display:block; width:20px; height: 20px; line-height: 20px; text-align: center; background:#ccc; font-size: 1.2rem; border-radius: 50%;
+.targetMenu a{display:block; width:20px; height: 20px; line-height: 20px; text-align: center; background:#888; font-size: 1.2rem; border-radius: 50%;
     cursor: pointer; transition:all .6s; margin: 0 auto;
 }
 .targetMenu li{width:50px; height: 50px; text-align: center;}
@@ -33,9 +30,9 @@ section.active .txt{position:absolute; top:300px; left:700px; opacity:1; border:
 section .title{
     font-family: 'Noto Sans KR', sans-serif;
     position: absolute;
-    top:30%;
+    top: 70%;
     left:20%;
-    font-size: 4rem;
+    font-size: 4.5rem;
     color:#fff;
     transform: translate(-50%,-50%);
 }
@@ -51,28 +48,29 @@ section.active .title span{
     transform:translate(0,0);
     opacity:1;
 }
-section .title span:nth-child(1){transition-delay: .1s; font-weight: 100;}
-section .title span:nth-child(2){transition-delay: .2s; font-weight: 100;}
-section .title span:nth-child(3){transition-delay: .3s; font-weight: 100;}
-section .title span:nth-child(4){transition-delay: .4s; font-weight: 100;}
-section .title span:nth-child(5){transition-delay: .5s; font-weight: 100;}
-
-section .title span:nth-child(7){transition-delay: .6s; font-weight: 500; color:#fcc;}
-section .title span:nth-child(8){transition-delay: .7s; font-weight: 500; color:#fcc;}
-section .title span:nth-child(9){transition-delay: .8s; font-weight: 500; color:#fcc;}
-
-section .title span:nth-child(10){transition-delay: .9s;font-weight: 200;}
-section .title span:nth-child(11){transition-delay: 1s;font-weight: 200;}
-section .title span:nth-child(12){transition-delay: 1.1s;font-weight: 200;}
-section .title span:nth-child(13){transition-delay: 1.2s;font-weight: 200;}
-section .title span:nth-child(15){transition-delay: 1.3s;  color:#ccc;}
-section .title span:nth-child(16){transition-delay: 1.4s; color:#ccc;}
-section .title span:nth-child(17){transition-delay: 1.5s; color:#ccc;}
-section .title span:nth-child(18){transition-delay: 1.6s;font-weight: 100; font-size:3.5rem;}
-section .title span:nth-child(19){transition-delay: 1.7s;font-weight: 100; font-size:3.5rem;}
-section .title span:nth-child(20){transition-delay: 1.8s;font-weight: 100; font-size:3.5rem;}
-
-
+section .title span p{
+    float:left;
+    font-size:20px;
+    line-height: 40px;
+}
+section .title span:nth-child(1) p:nth-child(2){
+    padding-left:187px;
+}
+section .title span:nth-child(13) p:nth-child(2){
+    padding-left:225px;
+}
+section .title span:nth-child(1){border-bottom: #fff 2px solid; font-weight: 100;}
+section .title span:nth-child(2){transition-delay: .1s; font-family: 'Zen Kurenaido', sans-serif;}
+section .title span:nth-child(3){transition-delay: .2s; font-family: 'Zen Kurenaido', sans-serif;}
+section .title span:nth-child(4){transition-delay: .3s; font-family: 'Zen Kurenaido', sans-serif;}
+section .title span:nth-child(5){transition-delay: .4s; font-family: 'Zen Kurenaido', sans-serif;}
+section .title span:nth-child(6){transition-delay: .5s; font-family: 'Zen Kurenaido', sans-serif;}
+section .title span:nth-child(7){transition-delay: .6s; font-family: 'Zen Kurenaido', sans-serif;}
+section .title span:nth-child(8){transition-delay: .7s; font-family: 'Zen Kurenaido', sans-serif;}
+section .title span:nth-child(9){transition-delay: .8s; font-family: 'Zen Kurenaido', sans-serif;}
+section .title span:nth-child(10){transition-delay: .9s; font-family: 'Zen Kurenaido', sans-serif;}
+section .title span:nth-child(11){transition-delay: 1.0s; font-family: 'Zen Kurenaido', sans-serif;}
+section .title span:nth-child(13){border-top: #fff 2px solid; font-weight: 100;}
 /* 두번째 섹션 */
 section .protitle{
     width: 30%;
@@ -161,7 +159,7 @@ section.active .round{
     width:60%;
     position: absolute;
     top:30%;
-    left:56%;
+    left:60%;
     transform: translateX(-50%);   
 }
 .protitle p{
@@ -378,34 +376,6 @@ section.active .rightMokup{
 }
 
 /* 4번쨰 섹션 */
-section .leftSul{
-    width:20%;
-    height:80vh;
-    position:absolute;
-    top:10vh;
-    left:10%;
-    opacity: 0;
-    transition:.6s;
-    transition-delay: 0.6s;
-}
-.rightMokup img{
-    width: 80%;
-}
-section.active .leftSul{
-    left:5%;
-    opacity: 1;
-}
-section .rightMokup{
-    width:70%;
-    height:80vh;
-    position:absolute;
-    top:10vh;
-    left:150%;
-    background: #fee;
-    opacity: 0;
-    transition-delay: 0.6s;
-    transition:.6s;
-}
 section:nth-child(4).active .rightMokup{
     width:70%;
     height:80vh;
@@ -418,32 +388,44 @@ section:nth-child(4).active .rightMokup{
     background-size: cover;
     background-position: center center;
 }
-.Dintro{
-    position:absolute;
-    bottom:0;
-}
-.Dintro p{
-    border-bottom: 16px;
-    font-size:10px;
-    font-family:'NotoSansKR', cursive;
-}
-.Dintro h3{
-    padding-bottom: 3px;
-}
-.Dintro p:nth-child(4),.Dintro p:nth-child(6){
-    padding-bottom:10px;
-}
-.Dintro p ul li{
-    line-height:26px;
-}
-.Dintro p:last-child{
-    padding-bottom:0;
-}
-
 /* 5번째 섹션 */
 section:nth-child(5).active .rightMokup{
+    width:70%;
+    height:80vh;
+    position:absolute;
+    top:10vh;
+    left:30%;
+    background: #fee;
+    opacity: 1;
     background: url('../img/PSD_07\ 작업.png');
+    background-size: cover;
+    background-position: center center;
 }
+/* 6번째 섹션 */
+section:nth-child(6).active .rightMokup{
+    width:70%;
+    height:80vh;
+    position:absolute;
+    top:10vh;
+    left:30%;
+    background: #fee;
+    opacity: 1;
+    background: url('../img/Clay_Mockup___14_.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+/* 7번째 섹션 */
+section:nth-child(7) .title span:nth-child(8){
+    padding-left:32px;
+}
+section:nth-child(7) span:nth-child(3){font-size:67px;font-family: 'Zen Kurenaido', sans-serif;}
+section:nth-child(7) span:nth-child(4){font-size:67px;font-family: 'Zen Kurenaido', sans-serif;}
+section:nth-child(7) span:nth-child(5){font-size:67px;font-family: 'Zen Kurenaido', sans-serif;}
+section:nth-child(7) span:nth-child(6){font-size:67px;font-family: 'Zen Kurenaido', sans-serif;}
+section:nth-child(7) span:nth-child(7){font-size:67px;font-family: 'Zen Kurenaido', sans-serif;}
+section:nth-child(7) span:nth-child(8){font-size:67px;font-family: 'Zen Kurenaido', sans-serif;}
+section:nth-child(7) span:nth-child(9){font-size:67px;font-family: 'Zen Kurenaido', sans-serif;}
+section:nth-child(7) span:nth-child(10){font-size:67px;font-family: 'Zen Kurenaido', sans-serif;}
 /* 컬러박스 */
 .ColorBox1{
     width:10px;
@@ -466,31 +448,6 @@ section:nth-child(5).active .rightMokup{
     width:10px;
     height:10px;
     background: #fef100;
-    display:inline-block;
-    position:relative;
-    top:1.4px;
-}
-.ColorBox4{
-    width:8px;
-    height:8px;
-    background: #ffffff;
-    border:#333 1px solid;
-    display:inline-block;
-    position:relative;
-    top:1.4px;
-}
-.ColorBox5{
-    width:10px;
-    height:10px;
-    background: #ffff66;
-    display:inline-block;
-    position:relative;
-    top:1.4px;
-}
-.ColorBox6{
-    width:10px;
-    height:10px;
-    background: #ffcccc;
     display:inline-block;
     position:relative;
     top:1.4px;

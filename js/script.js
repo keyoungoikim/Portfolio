@@ -15,7 +15,7 @@
             count++;
             var gosectioncount = count%7; // 스크롤을 5번 굴리면 이동.
             if(e.wheelDelta<0){
-                if(gosectioncount == 0 && sectionCounter<5)sectionCounter++;
+                if(gosectioncount == 0 && sectionCounter<6)sectionCounter++;
             }else{
                 if(gosectioncount == 0 && sectionCounter>0)sectionCounter--;
             }
