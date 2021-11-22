@@ -148,6 +148,7 @@ header{width:100%; background: #fef100;}
 }
 
 .burger{
+    display:none;
     width:32px; height:32px;
     position: absolute;
     top:5%;
@@ -534,5 +535,8 @@ header{width:100%; background: #fef100;}
     }
     .imgbox li:nth-child(4){
         margin-top:0;
+    }
+    .burger{
+        display:block;
     }
 }
