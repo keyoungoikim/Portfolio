@@ -359,6 +359,9 @@ section.active .rightMokup{
     position:absolute;
     bottom:0;
 }
+.Dintro h3{
+    line-height:30px;
+}
 .Dintro p{
     border-bottom: 16px;
     font-size:10px;
@@ -418,14 +421,14 @@ section:nth-child(6).active .rightMokup{
 section:nth-child(7) .title span:nth-child(8){
     padding-left:32px;
 }
-section:nth-child(7) span:nth-child(3){font-size:67px;font-family: 'Zen Kurenaido', sans-serif;}
-section:nth-child(7) span:nth-child(4){font-size:67px;font-family: 'Zen Kurenaido', sans-serif;}
-section:nth-child(7) span:nth-child(5){font-size:67px;font-family: 'Zen Kurenaido', sans-serif;}
-section:nth-child(7) span:nth-child(6){font-size:67px;font-family: 'Zen Kurenaido', sans-serif;}
-section:nth-child(7) span:nth-child(7){font-size:67px;font-family: 'Zen Kurenaido', sans-serif;}
-section:nth-child(7) span:nth-child(8){font-size:67px;font-family: 'Zen Kurenaido', sans-serif;}
-section:nth-child(7) span:nth-child(9){font-size:67px;font-family: 'Zen Kurenaido', sans-serif;}
-section:nth-child(7) span:nth-child(10){font-size:67px;font-family: 'Zen Kurenaido', sans-serif;}
+section:nth-child(7) span:nth-child(3){font-size:66px;font-family: 'Zen Kurenaido', sans-serif;}
+section:nth-child(7) span:nth-child(4){font-size:66px;font-family: 'Zen Kurenaido', sans-serif;}
+section:nth-child(7) span:nth-child(5){font-size:66px;font-family: 'Zen Kurenaido', sans-serif;}
+section:nth-child(7) span:nth-child(6){font-size:66px;font-family: 'Zen Kurenaido', sans-serif;}
+section:nth-child(7) span:nth-child(7){font-size:66px;font-family: 'Zen Kurenaido', sans-serif;}
+section:nth-child(7) span:nth-child(8){font-size:66px;font-family: 'Zen Kurenaido', sans-serif;}
+section:nth-child(7) span:nth-child(9){font-size:66px;font-family: 'Zen Kurenaido', sans-serif;}
+section:nth-child(7) span:nth-child(10){font-size:66px;font-family: 'Zen Kurenaido', sans-serif;}
 /* 컬러박스 */
 .ColorBox1{
     width:10px;
@@ -448,6 +451,30 @@ section:nth-child(7) span:nth-child(10){font-size:67px;font-family: 'Zen Kurenai
     width:10px;
     height:10px;
     background: #fef100;
+    display:inline-block;
+    position:relative;
+    top:1.4px;
+}
+.ColorBox4{
+    width:10px;
+    height:10px;
+    background: #ffff00;
+    display:inline-block;
+    position:relative;
+    top:1.4px;
+}
+.ColorBox5{
+    width:10px;
+    height:10px;
+    background: #333333;
+    display:inline-block;
+    position:relative;
+    top:1.4px;
+}
+.ColorBox6{
+    width:10px;
+    height:10px;
+    background: #f4ffed;
     display:inline-block;
     position:relative;
     top:1.4px;

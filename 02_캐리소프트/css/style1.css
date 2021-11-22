@@ -395,8 +395,10 @@ section:nth-child(6){
     .burger{display:block;}
     .burgerbar{display:block;}
     #content section .sec_title h3{font-size:2rem;}
-    .card h5{font-size:1rem;}
-
+    .card h5{
+        font-size:0.9rem;
+        text-align: center;
+    }
     .whatwedo .whcard{
         width:calc(100%/2);
     }
@@ -412,8 +414,11 @@ section:nth-child(6){
     #character ul li{
         width:calc(100%/2);
     }
-    .galleryimg p:nth-child(1){
-        width:150%;
+    .galleryimg p:nth-child(1) img{
+        width:100%;
+    }
+    #gallery p:nth-child(1) img{
+        display:block;
     }
     .galleryimg img{
         width:50%;
