@@ -51,7 +51,7 @@
         $('.skillchart').click(
             function(){
                 $(this).easyPieChart({
-                    barColor: '#aaf',
+                    barColor: '#966f22',
                     trackColor: '#ccc',
                     scaleColor: '#fff',
                     lineCap: 'butt',

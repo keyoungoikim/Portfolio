@@ -120,12 +120,12 @@ header{
     transform:rotate(-45deg);
 }
 section:nth-child(1){
-    padding-bottom: 20px;
+    padding-bottom: 30px;
     width:80%;
     margin:0 auto;
 } 
 section:nth-child(3){
-    padding-bottom: 20px;
+    padding-bottom: 30px;
     width:80%;
     margin:0 auto;
 }
@@ -174,6 +174,7 @@ section:nth-child(6){
     transform: translate(-50%, -50%);
     opacity: 1;
     text-align: center;
+    width: 60%;
 }
 
 .slideBg1.on{
@@ -216,8 +217,8 @@ section:nth-child(6){
 }
 .slide_title p{
     color:#fff;
-    line-height: 1.2rem;
     padding:30px;
+    font-size:20px;
 }
 .slide_title button{
     width:120px;
@@ -264,7 +265,7 @@ section:nth-child(6){
 #wrap{
     width:100%;
     background: rgba(0,0,0,.05);
-    padding:0px 0px 20px 0px;
+    padding:0px 0px 30px 0px;
 }
 .allwedo{
     width:80%;
