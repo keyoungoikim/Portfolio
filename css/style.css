@@ -78,7 +78,7 @@ section .protitle{
     width: 30%;
     height: 50vh;
     position: absolute;
-    top:25vh;
+    top:30vh;
     left:-50%;
     transition:.6s;
 }
@@ -86,7 +86,7 @@ section.active .protitle{
     width: 30%;
     height: 50vh;
     position: absolute;
-    top:25vh;
+    top:30vh;
     left:20%;
 }
 section .subject{
@@ -176,8 +176,8 @@ section.active .round{
 section .profile{
     position:absolute;
     width:30%;
-    height:50vh;
-    top:25VH;
+    height:55vh;
+    top:30VH;
     left:100%;
     transition:.6s;
     transition-delay: .6s;
@@ -186,9 +186,9 @@ section .profile{
 section.active .profile{
     position:absolute;
     width:30%;
-    height:50vh;
-    top:25VH;
-    left:60%;
+    height:55vh;
+    top:30VH;
+    left:55%;
     opacity: 1;
 }
 .profile table{
@@ -254,13 +254,14 @@ section.active .chart .graph li:nth-child(3) div{
     position:absolute;
     top:80vh; left:30%;
     width:70%;
-    display:flex;
+    /* display:flex; */
+    display:none;
 }
 .skillchart {
-            position: relative;
-            width:100px;
-            height:100px;
-        }
+    position: relative;
+    width:100px;
+    height:100px;
+}
 .skillchart span.skilltitle{
     position: absolute; display: block; width: 100%; text-align: center; 
     top:50%; left: 50%;
