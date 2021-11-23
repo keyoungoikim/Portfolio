@@ -87,7 +87,7 @@ section.active .protitle{
     height: 50vh;
     position: absolute;
     top:25vh;
-    left:10%;
+    left:20%;
 }
 section .subject{
     font-family: 'Ephesis', cursive;
@@ -176,8 +176,8 @@ section.active .round{
 section .profile{
     position:absolute;
     width:30%;
-    height:35vh;
-    top:40vh;
+    height:50vh;
+    top:25VH;
     left:100%;
     transition:.6s;
     transition-delay: .6s;
@@ -186,13 +186,15 @@ section .profile{
 section.active .profile{
     position:absolute;
     width:30%;
-    height:35vh;
-    top:40vh;
-    left:50%;
+    height:50vh;
+    top:25VH;
+    left:60%;
     opacity: 1;
 }
 .profile table{
     width:100%;
+    position: absolute;
+    TOP:20%;
 }
 .profile table tr td:nth-child(1){
     width:30%; 
@@ -272,7 +274,7 @@ section .port{
     font-style:italic;
     position:absolute;
     top:calc(50vh + 150px);
-    left:calc(13% - 259.8px);
+    left:calc(20% - 259.8px);
     transform: rotate(-30deg);
     transform-origin: left top;
     z-index:1;
@@ -286,7 +288,7 @@ section.active .port{
     font-style:italic;
     position:absolute;
     top:50vh;
-    left:13%;
+    left:20%;
     transform: rotate(-30deg);
     transform-origin: left top;
     z-index:1;
@@ -298,8 +300,8 @@ section .folio{
     font-family: 'Open Sans', sans-serif;
     font-style:italic;
     position:absolute;
-    top:calc(45vh - 150px);
-    left:calc(40% + 259.8px);
+    top:calc(50vh - 150px);
+    left:calc(50% + 259.8px);
     transform: rotate(-30deg);
     transform-origin: left top;
     z-index:1;
@@ -311,8 +313,8 @@ section.active .folio{
     font-family: 'Open Sans', sans-serif;
     font-style:italic;
     position:absolute;
-    top:45vh;
-    left:40%;
+    top:50vh;
+    left:50%;
     transform: rotate(-30deg);
     transform-origin: left top;
     z-index:1;
