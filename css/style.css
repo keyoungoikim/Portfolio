@@ -78,16 +78,16 @@ section .protitle{
     width: 30%;
     height: 50vh;
     position: absolute;
-    top:30vh;
-    left:-50%;
+    top:23vh;
+    left:-80%;
     transition:.6s;
 }
 section.active .protitle{
     width: 30%;
     height: 50vh;
     position: absolute;
-    top:30vh;
-    left:20%;
+    top:23vh;
+    left:35%;
 }
 section .subject{
     font-family: 'Ephesis', cursive;
@@ -164,20 +164,20 @@ section.active .round{
     left:60%;
     transform: translateX(-50%);   
 }
-.protitle p{
+/*.protitle p{
     width:80%;
     position: absolute;
     top:45%;
     left:50%;
     transform: translateX(-50%);
-}
+}*/
 
 /* 섹션 2번째 - profile - */
 section .profile{
     position:absolute;
     width:30%;
     height:55vh;
-    top:30VH;
+    top:35VH;
     left:100%;
     transition:.6s;
     transition-delay: .6s;
@@ -187,8 +187,8 @@ section.active .profile{
     position:absolute;
     width:30%;
     height:55vh;
-    top:30VH;
-    left:55%;
+    top:35VH;
+    left:40%;
     opacity: 1;
 }
 .profile table{
@@ -254,8 +254,7 @@ section.active .chart .graph li:nth-child(3) div{
     position:absolute;
     top:80vh; left:30%;
     width:70%;
-    /* display:flex; */
-    display:none;
+    display:flex; 
 }
 .skillchart {
     position: relative;
